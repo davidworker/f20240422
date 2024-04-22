@@ -15,3 +15,11 @@
 
 1. `Message` 輸入說明
 2. 點 `Commit`
+
+
+## 雲端設定
+
+1. `Source Control` > `View Git Graph`
+2. 右上角小齒輪 `Remote Config`
+3. `Name` 輸入 `origin`
+4. `fetch URL` 跟 `push URL` 貼上 `github repositry URL`

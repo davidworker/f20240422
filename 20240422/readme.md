@@ -69,3 +69,5 @@
 - Ctrl + S -> 存檔
 - Ctrl + N -> 新增空白檔案
 - Ctrl + Shift + N -> 建立新視窗
+
+[GIT](./git_use.md)
