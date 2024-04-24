@@ -206,7 +206,7 @@
 
 對應 css `display:inline`
 
-`div` 無語意
+`span` 無語意
 
 `span_tag.html`
 
@@ -224,4 +224,110 @@
 <div>
     <div class="text-red">我</div>是第一名。
 </div>
+```
+
+## 超連結
+
+對應 css `display:inline`
+
+`a` 無語意
+
+`href` 必填屬性
+
+`target` 開啟方式
+
+- `_self` 預設值，現有視窗轉跳，連結目標與現在頁面有前後文關係時使用
+
+- `_blank` 開新視窗，連結目標與現在頁面無前後文關係時使用
+
+
+## 一頁式實作
+
+`a_one_page.html`
+
+```html
+<style>
+    *,
+    *::after,
+    *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        background: #000;
+        color: #fff;
+        height: 80px;
+        position: fixed;
+        width: 100%;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        display: flex;
+        color: #fff;
+        gap: 15px;
+    }
+
+    .menu ul a {
+        color: inherit;
+        text-decoration: none;
+        transition: 0.6s;
+    }
+
+    .menu ul a:hover {
+        color: red;
+    }
+
+    .page {
+        width: 100%;
+        height: 100vh;
+        background: rgb(24, 57, 148);
+        color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    #about,
+    #contact {
+        background: red;
+    }
+</style>
+
+<div class="header">
+    <div>LOGO</div>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#about">ABOUT</a>
+            </li>
+            <li>
+                <a href="#product">PRODUCT</a>
+            </li>
+            <li>
+                <a href="#contact">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="page">HOME</div>
+<div class="page" id="about">ABOUT</div>
+<div class="page" id="product">PRODUCT</div>
+<div class="page" id="contact">CONTACT</div>
 ```
