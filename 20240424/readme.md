@@ -102,3 +102,36 @@
     "editor.formatOnSave": true
 }
 ```
+
+## 元素標籤宣告
+
+`element_base.html`
+
+```html
+<style>
+    #first-student {
+        color: red;
+    }
+</style>
+
+<div id="first-student" class="student">
+    First Student
+</div>
+
+<div id="first student" class="student">
+    First Student
+</div>
+
+<div id="aaa">
+    aaa
+</div>
+
+<div id="bbb" id="ccc">錯誤</div>
+
+<div id="bbb ccc">同時擁有 bbb ccc</div>
+
+<!-- 不允許輸入內容的標籤不用關閉 -->
+<img src="some.png" alt="">
+
+<!-- <img src="some.png" alt=""></img> Error -->
+```
