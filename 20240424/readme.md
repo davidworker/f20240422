@@ -135,3 +135,53 @@
 
 <!-- <img src="some.png" alt=""></img> Error -->
 ```
+
+## h tag
+
+***主要用於文案語意呈現，需注重階層關係。***
+
+```html
+<style>
+    .good-article h1 {
+        font-size: 18px;
+        color: red;
+    }
+
+    .good-article h2 {
+        font-size: 28px;
+        color: #505050;
+    }
+
+    .good-article h3 {
+        font-size: 14px;
+        border: 1px solid #000;
+        padding: 10px;
+    }
+</style>
+
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<div>
+    <h2>我是一篇文章 BAD</h2>
+    <h1>第一章節</h1>
+    <h3>第一段落</h3>
+    <h1>第二章節</h1>
+    <h3>第二段落</h3>
+</div>
+
+<div class="good-article">
+    <h1>我是一篇文章 GOOD</h1>
+    <h2>第一章節</h2>
+    <h3>第一段落</h3>
+    <h2>第二章節</h2>
+    <h3>第二段落</h3>
+</div>
+```
+
+***字體顯示大小是由css樣式決定，不可因為視覺而忽略階層關係。***
+
+***一個頁面建議只有一個h1，避免被搜尋引擎認定惡意操作。***
