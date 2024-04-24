@@ -140,6 +140,8 @@
 
 ***主要用於文案語意呈現，需注重階層關係。***
 
+`h_tag.html`
+
 ```html
 <style>
     .good-article h1 {
@@ -185,3 +187,41 @@
 ***字體顯示大小是由css樣式決定，不可因為視覺而忽略階層關係。***
 
 ***一個頁面建議只有一個h1，避免被搜尋引擎認定惡意操作。***
+
+## 區塊元素
+
+對應 css `display:block`
+
+`div` 無語意
+
+`article` 內容較完整且能獨立存在
+
+`section` 內容有主題性或是明確意義
+
+***article跟section可互相為巢狀結構。***
+
+***如果不清楚是否有語意，或是在切版階段連文案都沒有時，無腦div到底即可。***
+
+## 行內元素
+
+對應 css `display:inline`
+
+`div` 無語意
+
+`span_tag.html`
+
+```html
+<style>
+    .text-red {
+        color: red;
+        font-size: 40px;
+    }
+</style>
+
+<h1>span tag</h1>
+<div class="text-red">我是第一名。</div>
+<div><span class="text-red">我</span>是第一名。</div>
+<div>
+    <div class="text-red">我</div>是第一名。
+</div>
+```
