@@ -101,6 +101,7 @@
         height: 100%;
         z-index: 2;
         background-color: #0000003f;
+        backdrop-filter: blur(3px); // 模糊效果
     }
 </style>
 
@@ -175,7 +176,7 @@
 </div>
 ```
 
-## menu
+## ul tag
 
 預設有 `list-style-type:disc` 建議改為 `list-style-type:none`
 
