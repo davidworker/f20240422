@@ -266,3 +266,158 @@
     </form>
 </div>
 ```
+
+## 多選
+
+`checkbox.html`
+
+- `[]` 代表陣列
+- 不使用陣列則只會帶入最後一個數值
+
+```html
+<form action="https://book.niceinfos.com/api/form/" method="GET">
+    <div><input type="checkbox" name="music[]" value="a1" id="music-a1" /> <label for="music-a1">A1</label></div>
+    <div><input type="checkbox" name="music[]" value="a2" id="music-a2" /> <label for="music-a2">A2</label></div>
+    <div><input type="checkbox" name="music[]" value="a3" id="music-a3" /> <label for="music-a3">A3</label></div>
+    <div><input type="checkbox" name="music[]" value="a4" id="music-a4" /> <label for="music-a4">A4</label></div>
+    <div>
+        <button>正確</button>
+    </div>
+</form>
+
+<form action="https://book.niceinfos.com/api/form/" method="GET">
+    <div><input type="checkbox" name="music" value="a1" id="music-fa1" /> <label for="music-fa1">A1</label></div>
+    <div><input type="checkbox" name="music" value="a2" id="music-fa2" /> <label for="music-fa2">A2</label></div>
+    <div><input type="checkbox" name="music" value="a3" id="music-fa3" /> <label for="music-fa3">A3</label></div>
+    <div><input type="checkbox" name="music" value="a4" id="music-fa4" /> <label for="music-fa4">A4</label></div>
+    <div>
+        <button>錯誤</button>
+    </div>
+</form>
+```
+
+## 多行輸入
+
+```html
+<textarea name="remark" cols="30" rows="10"></textarea>
+```
+
+- `cols` 欄數(column)，影響寬度。
+- `rows` 列數(row)，影響高度。
+
+***寬度與高度使用css的width與height來設定。***
+
+禁止調整寬高
+
+```html
+<style>
+    textarea {
+        resize: none;
+    }
+</style>
+```
+
+### 聯絡我們表單
+
+`textarea.html`
+
+```html
+<style>
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.slogan {
+    margin-bottom: 20px;
+}
+
+.form-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-item label {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-item input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+    border: 1px solid #dedede;
+}
+
+.form-item textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+    border: 1px solid #dedede;
+    resize: none;
+}
+
+.send-wrap {
+    text-align: right;
+}
+
+.send-wrap button {
+    padding: 10px 20px;
+    border: 0;
+    background: #1863d3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.send-wrap button:hover {
+    background: rgb(207, 31, 31);
+}
+</style>
+
+<div class="container">
+    <form action="https://book.niceinfos.com/api/form/" method="GET">
+        <h1 class="slogan">聯絡我們</h1>
+        <div class="form-item">
+            <label for="name">姓名</label>
+            <input type="text" name="name" id="name" value="" placeholder="輸入姓名">
+        </div>
+        <div class="form-item">
+            <label for="email">信箱</label>
+            <input type="text" name="email" id="email" value="" placeholder="輸入信箱">
+        </div>
+        <div class="form-item">
+            <label for="mobile">手機</label>
+            <input type="text" name="name" id="mobile" value="" placeholder="輸入手機">
+        </div>
+        <div class="form-item">
+            <label for="content">內容</label>
+            <textarea name="content" id="content" placeholder="輸入內容"></textarea>
+        </div>
+        <div class="send-wrap">
+            <button>留言</button>
+        </div>
+    </form>
+</div>
+```
