@@ -197,3 +197,43 @@
 
 </html>
 ```
+
+## CSS 宣告位置
+
+### HTML標籤
+
+```html
+<style>
+    h1 {
+        color: red;
+    }
+</style>
+```
+
+### HTML屬性
+
+```html
+<h1 style="color: blue;">Hello World2</h1>
+```
+
+### 獨立檔案 .css
+
+***推薦使用***
+
+`assets/css/main.css`
+
+```css
+h1 {
+    color: yellow;
+    font-size: 60px;
+}
+```
+
+`main.html`
+
+```html
+<head>
+    <!-- ... -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+```
