@@ -54,6 +54,28 @@
         #pic-choice {
             display: none;
         }
+
+
+        #my-picture.active {
+            box-shadow: 0 -9px 2px 1px #c2351c;
+            animation-name: run;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+
+        #my-picture.active label {
+            display: none;
+        }
+
+        @keyframes run {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -91,9 +113,10 @@
     choice.addEventListener('change', async () => {
         let file = choice.files[0];
         if (file) {
+            pic.classList.add('active');
             let data = await reader(file);
             pic.style.backgroundImage = `url(${data.result})`;
-            console.log(data.result, data.result.length);
+            pic.classList.remove('active');
         }
     })
 </script>
