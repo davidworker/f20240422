@@ -22,6 +22,8 @@
 
 ***option沒有value屬性時，內容即為數值。***
 
+***option使用`selected`屬性可設定預設值。***
+
 ### 多選
 
 - `name` -> 改用`[]`。
@@ -50,6 +52,38 @@
             <option>高雄</option>
         </select>
         <button>送出</button>
+    </form>
+</div>
+```
+
+## 檔案
+
+```html
+<input type="file" name="my-pic" />
+```
+
+- `type="file"` -> 檔案類型。
+- `name` -> 欄位名稱，傳送資料時欄位名稱。
+
+***顯示樣式為選擇檔案提示區塊，樣式調整受到限制。***
+
+### 檔案傳送條件
+
+- `enctype="multipart/form-data"`
+- `method="POST"`
+
+`file.html`
+
+```html
+<div class="container">
+    <h1>FILE TAG</h1>
+    <form action="https://book.niceinfos.com/api/form/" method="POST" enctype="multipart/form-data">
+        <div>
+            <!-- <label for="">選擇檔案</label> -->
+            <input type="file" id="my-pic" name="my-pic">
+        </div>
+        <input type="hidden" name="inject" value="hello">
+        <button>發送</button>
     </form>
 </div>
 ```
