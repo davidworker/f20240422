@@ -3,7 +3,7 @@
     height: 100px;
     background-color: red;
     color: #2c0db4;
-    text-wrap: nowrap;
+    overflow-wrap: normal;
     margin-bottom: 20px;
 }
 
@@ -12,7 +12,7 @@
     height: 100px;
     background-color: red;
     color: #2c0db4;
-    text-wrap: nowrap;
+    overflow-wrap: break-word;
     margin-bottom: 20px;
 }
 
