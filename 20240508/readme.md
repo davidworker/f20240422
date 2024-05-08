@@ -76,3 +76,12 @@ https://caniuse.com/
 - 設定行高時就要盡量避免設定高度
 
 `height.html`
+
+## 水平對齊
+
+`text-align`
+
+- `left` 靠左，預設值 (start)
+- `center` 置中
+- `right` 靠右 (end)
+- `justify` 平均分散，可避免右側不整齊
