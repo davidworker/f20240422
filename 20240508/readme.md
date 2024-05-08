@@ -113,3 +113,30 @@ https://caniuse.com/
 `font-family`
 
 https://fonts.google.com/
+
+## 字體寬度
+
+`font-weight`
+
+100(細) ~ 900(粗)
+
+***不要加上單位***
+
+```css
+.some {
+    font-weight: 800; /* 正確 */
+    font-weight: 800px; /* 錯誤 */
+}
+```
+
+```html
+<!-- html 註解方式 -->
+```
+
+## 背景顏色
+
+`background`
+
+***看到開發者工具屬性旁邊有箭頭。表示大屬性，可展開查看小屬性***
+
+NEXT 常用屬性#背景顏色
