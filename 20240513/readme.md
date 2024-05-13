@@ -227,3 +227,5 @@ ul {
 `popup.html`
 
 搭配`:checked`時做 `popup`
+
+NEXT 選擇器#複合選擇器
