@@ -106,3 +106,13 @@
     margin: 10px 20px 30px 40px; /* top 10px, right 20px, bottom 30px, left 40px */
 }
 ```
+
+## 盒子模型
+
+`box-sizing`
+
+- `content-box` 預設，`padding` 與 `border` 會影響整體寬高，容易導致破版。
+- `border-box` `padding`與 `border` 只會擠壓 `content` 寬高，無法擠壓時，才會向外擴散。
+
+參考 `box_model2.html`
+
