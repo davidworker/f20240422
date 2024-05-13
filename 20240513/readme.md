@@ -36,3 +36,24 @@
 ***當圖片小於容器大小時生效***
 
 ***重複通常用於小圖示重複排列***
+
+
+## 背景圖片尺寸
+
+`background-size`
+
+- `auto` 預設
+- `contain` 比例填充
+- `cover` 完整填充
+
+***使用 `cover` 可能會失真，但可以填滿整個容器***
+
+## 背景圖片位置
+
+`background-position`
+
+- `left`
+- `center`
+- `right`
+- `top`
+- `bottom`
