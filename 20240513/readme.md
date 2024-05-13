@@ -162,3 +162,27 @@ ul {
 [Normalize.css](https://necolas.github.io/normalize.css/)
 
 有限度的初始化，對第三方套件友善
+
+## 後代選擇器
+
+用`空格`表示
+
+***只要是在我底下，無論階層數，皆可套用***
+
+```css
+.s1 .item {
+    color: red;
+}
+```
+
+## 子階選擇器
+
+用`>`表示
+
+***只有在我底下第一層才可套用***
+
+```css
+.s1>.item {
+    color: red;
+}
+```
