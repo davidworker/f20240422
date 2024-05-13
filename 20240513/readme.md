@@ -116,3 +116,49 @@
 
 參考 `box_model2.html`
 
+## 初始化
+
+`reset.css`
+
+```css
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.slogan {
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+```
+
+### 套件
+
+[Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
+
+全部樣式都初始化
+
+[Normalize.css](https://necolas.github.io/normalize.css/)
+
+有限度的初始化，對第三方套件友善
