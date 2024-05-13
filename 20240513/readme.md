@@ -219,3 +219,11 @@ ul {
     <div class="item">5</div>
 </div>
 ```
+
+## 寬鬆相鄰選擇器
+
+用`~`表示
+
+`popup.html`
+
+搭配`:checked`時做 `popup`
