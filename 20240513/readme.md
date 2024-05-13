@@ -186,3 +186,36 @@ ul {
     color: red;
 }
 ```
+
+## 嚴謹相鄰選擇器
+
+用`+`表示
+
+***第一個鄰居，且符合條件***
+
+```css
+.wrap .item {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: red;
+}
+
+.wrap .sp {
+    background: blue;
+}
+
+.wrap .sp+.item {
+    font-size: 50px;
+}
+```
+
+```html
+<div class="wrap">
+    <div class="item">1</div>
+    <div class="item sp">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+</div>
+```
