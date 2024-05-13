@@ -57,3 +57,20 @@
 - `right`
 - `top`
 - `bottom`
+
+## 框線
+
+`border`
+
+- `border-width`
+- `border-color`
+- `border-style`
+
+## 導角
+
+`border-radius`
+
+## 畫圓形條件
+
+- 正方形
+- 導角數值大於等於正方形
