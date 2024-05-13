@@ -90,3 +90,19 @@
     padding: 10px 20px 30px 40px; /* top 10px, right 20px, bottom 30px, left 40px */
 }
 ```
+
+## 外距
+
+`margin`
+
+***框線以外的距離，用於兩個區塊之間***
+
+可用格式
+
+```css
+.some {
+    margin: 10px; /* top right bottom left */
+    margin: 10px 20px; /** top bottom 10px, left right 20px */
+    margin: 10px 20px 30px 40px; /* top 10px, right 20px, bottom 30px, left 40px */
+}
+```
