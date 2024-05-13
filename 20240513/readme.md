@@ -74,3 +74,19 @@
 
 - 正方形
 - 導角數值大於等於正方形
+
+## 內距
+
+`padding`
+
+***框線與內容之間的距離***
+
+可用格式
+
+```css
+.some {
+    padding: 10px; /* top right bottom left */
+    padding: 10px 20px; /** top bottom 10px, left right 20px */
+    padding: 10px 20px 30px 40px; /* top 10px, right 20px, bottom 30px, left 40px */
+}
+```
