@@ -126,3 +126,11 @@
 
 `table.html`
 
+## ::before, ::after
+
+`content` 為必要屬性
+
+蓋板廣告實作
+
+`ad.html`
+
