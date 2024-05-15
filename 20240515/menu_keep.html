@@ -47,4 +47,16 @@
     </div>
 </body>
 
+<script>
+    window.addEventListener('click', (e) => {
+        if (e.target.tagName == 'LABEL' || e.target.tagName == 'INPUT') {
+            return;
+        }
+        let chks = document.querySelectorAll('.second-menu-switch');
+        chks.forEach(c => {
+            c.checked = false;
+        })
+    });
+</script>
+
 </html>
