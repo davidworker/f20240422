@@ -100,3 +100,9 @@
     color: #f0f0f0;
 }
 ```
+
+## :hover
+
+二階層選單實作
+
+`menu.html`
