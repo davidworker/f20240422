@@ -114,3 +114,15 @@
 二階層選單實作(持久性)
 
 `menu_keep.html`
+
+## 子階選擇器
+
+- `:nth-child(n)` 手動指定
+- `:nth-child(odd)` 奇數
+- `:nth-child(even)` 偶數
+- `:last-child` 最後一個
+
+學生成績表練習
+
+`table.html`
+
