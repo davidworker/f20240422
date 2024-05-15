@@ -103,6 +103,14 @@
 
 ## :hover
 
-二階層選單實作
+二階層選單實作(短暫性)
 
 `menu.html`
+
+## :checked
+
+搭配 `<input type="checkbox">` 使用
+
+二階層選單實作(持久性)
+
+`menu_keep.html`
