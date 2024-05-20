@@ -70,3 +70,57 @@
     display: block;
 }
 ```
+
+## 位置
+
+使用`position`屬性
+
+- `relative` 浮貼，有`z-index`屬性可用，會佔據原本位置
+- `absolute` 遮住，有`z-index`屬性可用，不會佔據原本位置
+
+### z-index
+
+- 圖層的概念，數字越高代表圖層越高
+- 當數字相同時，後者蓋住前者
+
+`position.html`
+
+```html
+<div class="wrap">
+    <div class="item relative">R1</div>
+    <div class="item absolute">A</div>
+    <div class="item relative">R2</div>
+</div>
+```
+
+```css
+.wrap {
+    padding: 20px;
+    border: 1px solid #505050;
+}
+
+.wrap .item {
+    width: 100px;
+    height: 100px;
+    background: #dedede;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap .relative {
+    background: red;
+    position: relative;
+    /* opacity: 0.2; */
+    z-index: 1;
+}
+
+.wrap .absolute {
+    background: yellow;
+    color: red;
+    position: absolute;
+    z-index: 1; /* 調整數字觀察 */
+    opacity: 0.5;
+}
+```
