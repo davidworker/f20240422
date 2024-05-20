@@ -1,6 +1,7 @@
 .wrap {
     padding: 20px;
     border: 1px solid #505050;
+    position: relative;
 }
 
 .wrap .item {
@@ -33,4 +34,8 @@
     position: fixed;
     z-index: 2;
     opacity: 0.5;
+}
+
+.left-50 {
+    left: 50px;
 }
