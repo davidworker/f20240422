@@ -134,3 +134,21 @@
 - `relative`不參考原點直接移動，基本上只做為參考點，不移動
 - `absolute`移動時會往上一層找原點，原點指的是非`static`，如果都找不到就已`body`為原點
 - `fixed`直接參考`body`為原點，通常都是放在第一層
+
+## 畫臉練習
+
+`face.html`
+
+### 區塊置中顯示公式
+
+```css
+.some {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: calc(50% - 50px); /* width 一半 */
+    top: calc(50% - 25px); /* height 一半 */
+}
+```
+
+NEXT 位置實戰#POPUP
