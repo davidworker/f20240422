@@ -21,4 +21,23 @@
 
 ## flex justify-content
 
+水平排列
+
 `flex_justify_content.html`
+
+## flex align-content
+
+垂直排列
+
+`flex_align_content.html`
+
+
+## flex align-items
+
+垂直對齊
+
+- `stretch` 內容區塊無高度時展延
+- `flex-start` 靠上
+- `center` 置中
+- `flex-end` 靠下
+- `baseline` 第一個文字出現的地方
