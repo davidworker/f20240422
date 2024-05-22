@@ -36,6 +36,22 @@
 
 垂直對齊
 
+`flex_align_items.html`
+
+- `stretch` 內容區塊無高度時展延
+- `flex-start` 靠上
+- `center` 置中
+- `flex-end` 靠下
+- `baseline` 第一個文字出現的地方
+
+## flex align-self
+
+個別垂直對齊
+
+`flex_align_self.html`
+
+***通常放在子階層***
+
 - `stretch` 內容區塊無高度時展延
 - `flex-start` 靠上
 - `center` 置中
