@@ -57,3 +57,11 @@
 - `center` 置中
 - `flex-end` 靠下
 - `baseline` 第一個文字出現的地方
+
+## flex-wrap
+
+內容超出時行為
+
+- `no-wrap` 不換行，預設，不足時壓縮內容
+- `wrap` 換行
+- `wrap-reverse` 換行反轉
