@@ -1,0 +1,26 @@
+.d-block {
+    display: block;
+    background: red;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.d-inline {
+    display: inline;
+    background: blue;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.d-inline-block {
+    display: inline-block;
+    background: green;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
