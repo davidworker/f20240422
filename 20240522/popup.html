@@ -14,15 +14,21 @@
 <body>
     <div class="container">
         <h1 class="slogan">POPUP</h1>
+        <input type="checkbox" id="popup-switch">
+        <label for="popup-switch" class="btn primary">
+            <span class="open-text">開啟</span>
+            <span class="close-text">關閉</span>
+            <span>說明</span>
+        </label>
         <div class="popup-wrap">
             <div class="popup-container">
                 <h2 class="popup-header">Some popup</h2>
                 <div class="popup-content">Some Some Some</div>
-                <span class="popup-close-icon">
+                <label for="popup-switch" class="popup-close-icon">
                     <span class="material-symbols-outlined">
                         close
                     </span>
-                </span>
+                </label>
             </div>
         </div>
     </div>
