@@ -1,6 +1,9 @@
 html,
 body {
     background: #000;
+    font-size: 16px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .header {
@@ -10,4 +13,34 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    padding: 20px 15px;
+}
+
+.menu>ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.menu>ul a {
+    display: grid;
+    gap: 2px;
+    text-align: center;
+}
+
+.menu .en {
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+.menu .tw {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.menu>ul a:hover {
+    color: rgb(16, 77, 209);
 }
