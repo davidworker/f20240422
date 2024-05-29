@@ -202,6 +202,7 @@ body {
 .form-item-good label {
     color: #535353;
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .form-item-good input {
@@ -212,4 +213,31 @@ body {
     color: #000;
     width: 100%;
     font-size: 1.3rem;
+}
+
+.form-fn {
+    text-align: right;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    background: #dedede;
+    cursor: pointer;
+}
+
+.btn.success {
+    background: rgb(14, 172, 85);
+    color: #fff;
+}
+
+.btn.success:hover {
+    background: rgb(26, 204, 106);
+}
+
+.form-wrap {
+    margin-top: 25px;
 }
