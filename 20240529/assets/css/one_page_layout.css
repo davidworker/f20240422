@@ -125,11 +125,28 @@ body {
 
 .page-content>div {
     min-height: 300px;
+    position: relative;
 }
 
-.page-content>div:first-child {
+/* .page-content>div:first-child {
     border-right: 3px dashed #fff;
     padding-right: 30px;
+} */
+
+.page-content>div:first-child {
+    padding-right: 30px;
+}
+
+.page-content>div:first-child::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    /** height 剩餘數值一半 */
+    top: 5%;
+    height: 90%;
+    /** border-left-width 數值一半 */
+    right: -2px;
+    border-left: 4px dashed #fff;
 }
 
 .page-content>div:last-child {

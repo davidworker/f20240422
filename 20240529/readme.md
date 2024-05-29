@@ -42,3 +42,46 @@
 
 - 調整`#4242ff 30%`中的`30%`控制藍色長度
 - 高度修改`border-bottom: 3px solid #fff;`中的`3px`
+
+### 中間虛線
+
+#### 方式一
+
+```css
+.page-content>div:first-child {
+    border-right: 3px dashed #fff;
+    padding-right: 30px;
+}
+```
+
+須配合
+
+```css
+.page-content {
+    padding: 30px;
+}
+```
+
+#### 方式二
+
+```css
+.page-content>div:first-child::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    /** height 剩餘數值一半 */
+    top: 5%;
+    height: 90%;
+    /** border-left-width 數值一半 */
+    right: -2px;
+    border-left: 4px dashed #fff;
+}
+```
+
+不須配合
+
+```css
+.page-content {
+    padding: 30px;
+}
+```
