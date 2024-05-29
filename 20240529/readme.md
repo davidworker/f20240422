@@ -167,6 +167,53 @@
     outline: 0;
     background: transparent;
     color: #000;
+    font-size: 1.3rem;
 }
 ```
 
+#### 方式二破版修正
+
+```html
+<div class="form-item-good">
+    <label for="join-name">姓名</label>
+    <div>
+        <input type="text" id="join-name">
+    </div>
+</div>
+<div class="form-item-good">
+    <label for="join-email">真實信箱位置</label>
+    <div>
+        <input type="text" id="join-email">
+    </div>
+</div>
+```
+
+```css
+.form-item-good {
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 0 10px;
+    gap: 5px;
+}
+
+.form-item-good label {
+    color: #535353;
+    font-weight: 600;
+}
+
+.form-item-good input {
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    width: 100%;
+    font-size: 1.3rem;
+}
+```
