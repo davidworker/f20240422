@@ -113,6 +113,15 @@ body {
     left: calc(50% - 150px);
     width: 0;
     height: 3px;
-    border-left: 100px solid rgb(66, 66, 255);
+    border-left: 100px solid #4242ff;
     border-right: 200px solid #fff;
+}
+
+.slogan2 {
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #fff;
+    border-image: linear-gradient(to right, #4242ff 50%, #fff 50%) 1;
 }

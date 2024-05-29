@@ -23,3 +23,16 @@
     border-right: 200px solid #fff;
 }
 ```
+
+### slogan2 雙色底線
+
+```css
+.slogan2 {
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #fff;
+    border-image: linear-gradient(to right, #4242ff 50%, #fff 50%) 1;
+}
+```
