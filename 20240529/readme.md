@@ -85,3 +85,45 @@
     padding: 30px;
 }
 ```
+
+### 輸入框樣式
+
+```html
+<div class="form-item">
+    <label for="join-name">姓名</label>
+    <input type="text" id="join-name">
+</div>
+<div class="form-item">
+    <label for="join-email">真實信箱位置</label>
+    <input type="text" id="join-email">
+</div>
+```
+
+```css
+.form-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-item input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    padding: 0 60px;
+}
+
+.form-item label {
+    position: absolute;
+    color: #535353;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+```
