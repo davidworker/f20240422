@@ -24,6 +24,9 @@
 }
 ```
 
+- 高度修改`height: 3px;`
+
+
 ### slogan2 雙色底線
 
 ```css
@@ -33,6 +36,9 @@
     position: relative;
     padding-bottom: 12px;
     border-bottom: 3px solid #fff;
-    border-image: linear-gradient(to right, #4242ff 50%, #fff 50%) 1;
+    border-image: linear-gradient(to right, #4242ff 30%, #fff 0%) 1;
 }
 ```
+
+- 調整`#4242ff 30%`中的`30%`控制藍色長度
+- 高度修改`border-bottom: 3px solid #fff;`中的`3px`
