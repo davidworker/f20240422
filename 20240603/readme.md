@@ -224,3 +224,10 @@
 ## 解除 #page-2 高度滿版
 
 移除 `#page-2` 中的 `.page`
+
+
+## 學生資料表列印實作
+
+- `student_score_table_print.html`
+- `assets/css/student_score_table_print.css`
+- `assets/js/student_score_table_print.js`
