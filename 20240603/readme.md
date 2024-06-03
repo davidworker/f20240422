@@ -165,3 +165,42 @@
     z-index: 2;
 }
 ```
+
+## .flow-item
+
+```html
+<div class="flow-item">
+    <div class="flow-circle"></div>
+    <div class="flow-text">
+        <h3>title</h3>
+        <div>text</div>
+    </div>
+</div>
+```
+
+```css
+.flow-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.flow-item .flow-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    background: red;
+}
+
+.flow-item .flow-text {
+    position: absolute;
+    left: calc(50% + 50px);
+    padding: 15px;
+    background: rgb(7, 69, 150);
+    color: #fff;
+    border-radius: 8px;
+    min-width: 300px;
+}
+```
