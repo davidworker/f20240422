@@ -231,3 +231,11 @@
 - `student_score_table_print.html`
 - `assets/css/student_score_table_print.css`
 - `assets/js/student_score_table_print.js`
+
+## media feature
+
+- `min-width` -> 大於等於時套用，由小寫到大。
+- `max-width` -> 小於等於時套用，由大寫到小。
+- 避免同時使用min-width與max-width，以免造成規則衝突。
+
+`rwd_width.html`
