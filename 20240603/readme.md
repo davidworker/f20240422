@@ -123,3 +123,45 @@
     margin-right: auto;
 }
 ```
+
+## flow 中心線
+
+```html
+<div class="flow">
+    <div class="flow-item">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>
+    </div>
+</div>
+```
+
+```css
+.flow {
+    border: 1px solid #000;
+    padding: 30px 0;
+    position: relative;
+}
+
+.flow::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: calc(100% - 60px);
+    border-left: 4px dashed #fff;
+    left: calc(50% - 2px);
+    z-index: 1;
+}
+
+.flow-item {
+    position: relative;
+    z-index: 2;
+}
+```
