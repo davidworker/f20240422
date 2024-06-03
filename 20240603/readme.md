@@ -67,3 +67,59 @@
     z-index: 1;
 }
 ```
+
+
+## .page-content
+
+改為 for `#page-1`
+
+```css
+#page-1 .page-content>div {
+    min-height: 300px;
+    position: relative;
+}
+
+/* #page-1 .page-content>div:first-child {
+    border-right: 3px dashed #fff;
+    padding-right: 30px;
+} */
+
+#page-1 .page-content>div:first-child {
+    padding-right: 30px;
+}
+
+#page-1 .page-content>div:first-child::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    /** height 剩餘數值一半 */
+    top: 5%;
+    height: 90%;
+    /** border-left-width 數值一半 */
+    right: -2px;
+    border-left: 4px dashed #fff;
+}
+
+#page-1 .page-content>div:last-child {
+    padding-left: 30px;
+}
+
+#page-1 .page-content .text {
+    line-height: 30px;
+    text-align: justify;
+}
+```
+
+## .slogan2
+
+針對 `#page-2` 定義
+
+```css
+#page-2 .slogan2 {
+    max-width: 300px;
+    /* margin: auto;
+    margin-bottom: 15px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+```
