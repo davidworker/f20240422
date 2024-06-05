@@ -1,8 +1,5 @@
 .mobile-menu {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    display: none;
 }
 
 .mobile-menu-wrap {
@@ -47,4 +44,17 @@
     transform: rotate(-45deg);
     position: relative;
     top: -7px;
+}
+
+@media screen and (max-width: 800px) {
+    .mobile-menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .header-wrap .menu {
+        display: none;
+    }
 }
