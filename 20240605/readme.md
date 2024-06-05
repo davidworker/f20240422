@@ -128,3 +128,56 @@
     }
 }
 ```
+
+### 手機板選單切換
+
+```html
+<div class="header-wrap">
+    <input type="checkbox" id="mobile-menu-sw">
+    <!-- ... -->
+</div>
+```
+
+```css
+#mobile-menu-sw:checked~.mobile-menu .mobile-menu-wrap>span {
+    background-color: red;
+}
+
+#mobile-menu-sw:checked~.mobile-menu .mobile-menu-wrap>span:first-child {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+    left: 1px;
+}
+
+#mobile-menu-sw:checked~.mobile-menu .mobile-menu-wrap>span:nth-child(2) {
+    display: none;
+}
+
+#mobile-menu-sw:checked~.mobile-menu .mobile-menu-wrap>span:last-child {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
+}
+
+@media screen and (max-width: 800px) {
+    /* ... */
+
+    #mobile-menu-sw:checked~.menu {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding: 20px;
+    }
+
+    #mobile-menu-sw:checked~.menu>ul {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+```
