@@ -220,3 +220,31 @@ ipconfig
 ```
 
 將查詢到的IP貼到手機網址列
+
+
+### #page2 手機板
+
+```css
+.flow-item:nth-child(even) .flow-text {
+    left: 50px;
+    right: unset;
+    text-align: left;
+}
+
+.flow-item .flow-text {
+    left: 50px;
+}
+
+.flow::before {
+    left: 11px;
+}
+
+.flow-item {
+    justify-content: flex-start;
+}
+
+.flow-wrap {
+    display: grid;
+    gap: 40px;
+}
+```

@@ -108,4 +108,27 @@ body {
     #page-1 .page-content>div:last-child {
         padding-left: 0;
     }
+
+    .flow-item:nth-child(even) .flow-text {
+        left: 50px;
+        right: unset;
+        text-align: left;
+    }
+
+    .flow-item .flow-text {
+        left: 50px;
+    }
+
+    .flow::before {
+        left: 11px;
+    }
+
+    .flow-item {
+        justify-content: flex-start;
+    }
+
+    .flow-wrap {
+        display: grid;
+        gap: 40px;
+    }
 }
