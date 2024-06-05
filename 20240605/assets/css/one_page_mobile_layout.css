@@ -22,3 +22,15 @@
     background-color: #000;
     border-radius: 100px;
 }
+
+#mobile-menu-sw {
+    display: none;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span {
+    background-color: red;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:first-child {
+    transform: rotate(45deg);
+}

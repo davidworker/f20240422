@@ -54,3 +54,30 @@
     border-radius: 100px;
 }
 ```
+
+### 手機版icon狀態切換
+
+```html
+<div class="mobile-menu">
+    <input type="checkbox" id="mobile-menu-sw">
+    <label for="mobile-menu-sw" class="mobile-menu-wrap">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</div>
+```
+
+```css
+#mobile-menu-sw {
+    display: none;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span {
+    background-color: red;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:first-child {
+    transform: rotate(45deg);
+}
+```
