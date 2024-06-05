@@ -81,3 +81,29 @@
     transform: rotate(45deg);
 }
 ```
+
+### 手機版icon狀態切換特效
+
+
+```css
+.mobile-menu-wrap>span {
+    /* ... */
+    transition: 0.3s;
+}
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:first-child {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+    left: 1px;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:nth-child(2) {
+    display: none;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:last-child {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
+}
+```

@@ -21,6 +21,7 @@
     height: 4px;
     background-color: #000;
     border-radius: 100px;
+    transition: 0.3s;
 }
 
 #mobile-menu-sw {
@@ -33,4 +34,17 @@
 
 #mobile-menu-sw:checked~.mobile-menu-wrap>span:first-child {
     transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+    left: 1px;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:nth-child(2) {
+    display: none;
+}
+
+#mobile-menu-sw:checked~.mobile-menu-wrap>span:last-child {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
 }
