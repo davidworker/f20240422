@@ -111,6 +111,10 @@
 ### 斷點切換
 
 ```css
+.mobile-menu {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
     .mobile-menu {
         width: 100%;
