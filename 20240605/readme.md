@@ -181,3 +181,42 @@
     }
 }
 ```
+
+### #page-1 手機板
+
+```css
+#page-1 .page-content {
+    grid-template-columns: 1fr;
+}
+
+#page-1 .page-content>div:first-child::after {
+    right: unset;
+    left: 0;
+    top: unset;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-left: 0;
+    border-bottom: 4px dashed #fff;
+}
+
+#page-1 .page-content>div:first-child {
+    padding-right: 0;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+#page-1 .page-content>div:last-child {
+    padding-left: 0;
+}
+```
+
+## 查詢電腦 IP
+
+```shell
+Ctrl + R > cmd
+
+ipconfig
+```
+
+將查詢到的IP貼到手機網址列
