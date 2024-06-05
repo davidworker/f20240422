@@ -248,3 +248,18 @@ ipconfig
     gap: 40px;
 }
 ```
+
+### 手機版選單項目下畫線
+
+```css
+.menu>ul>li {
+    border-bottom: 2px dashed #000;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.menu>ul>li:last-child {
+    border: 0;
+    padding-bottom: 0;
+}
+```

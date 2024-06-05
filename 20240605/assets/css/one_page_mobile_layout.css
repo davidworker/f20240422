@@ -131,4 +131,15 @@ body {
         display: grid;
         gap: 40px;
     }
+
+    .menu>ul>li {
+        border-bottom: 2px dashed #000;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .menu>ul>li:last-child {
+        border: 0;
+        padding-bottom: 0;
+    }
 }
