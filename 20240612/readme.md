@@ -169,3 +169,100 @@ body {
     transform: rotate(45deg);
 }
 ```
+
+## 變形原點
+
+`transform_origin.html`
+
+```html
+<div class="container">
+    <h1 class="slogan">transform-origin</h1>
+    <div class="grid">
+        <div class="item">
+            <div class="cube"></div>
+        </div>
+        <div class="item x30">
+            <div class="cube"></div>
+        </div>
+        <div class="item y30">
+            <div class="cube"></div>
+        </div>
+        <div class="item mix">
+            <div class="cube"></div>
+        </div>
+    </div>
+</div>
+```
+
+```css
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px auto;
+}
+
+.grid .item {
+    height: 100px;
+    width: 100px;
+    border: 2px dashed #dedede;
+    position: relative;
+}
+
+.grid .item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    background: blue;
+}
+
+.grid .item.x30::after {
+    left: calc(30px - 10px);
+}
+
+.grid .item.y30::after {
+    top: calc(30px - 10px);
+}
+
+.grid .item.mix::after {
+    left: unset;
+    top: unset;
+    right: -10px;
+    bottom: -10px;
+}
+
+.item .cube {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 37, 37);
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.item.x30 .cube {
+    transform-origin: 30px;
+}
+
+.item.y50 .cube {
+    transform-origin: inherit 30px;
+}
+
+.item.mix .cube {
+    transform-origin: right bottom;
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+```
