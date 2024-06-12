@@ -266,3 +266,53 @@ body {
     }
 }
 ```
+
+## 位移
+
+`translate.html`
+
+```html
+<div class="container">
+    <h1 class="slogan">translate</h1>
+    <div class="box">
+        <div class="move"></div>
+    </div>
+
+    <div class="box">
+        <div class="r"></div>
+    </div>
+</div>
+```
+
+```css
+.box {
+    width: 200px;
+    height: 50px;
+    border: 2px dashed #dedede;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.move {
+    width: 100%;
+    height: 100%;
+    background: red;
+    opacity: 0.8;
+    transform: translate(10px, 10px);
+}
+
+.r {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: red;
+    opacity: 0.8;
+    top: 10px;
+    left: 10px;
+}
+```
+
+### 與position offset差異
+
+- 效能比較好
+- IE8 以下不支援
