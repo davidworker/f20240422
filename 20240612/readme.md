@@ -248,8 +248,8 @@ body {
     transform-origin: 30px;
 }
 
-.item.y50 .cube {
-    transform-origin: inherit 30px;
+.item.y30 .cube {
+    transform-origin: 50% 30px;
 }
 
 .item.mix .cube {
