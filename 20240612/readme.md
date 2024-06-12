@@ -322,3 +322,14 @@ body {
 `scale.html`
 
 `scale_image.html`
+
+
+## 轉場
+
+### 無效範例
+- width:auto -> width: 100px
+- display: none -> display:block
+
+`color_change.html`
+
+`transition_timing_function.html`
