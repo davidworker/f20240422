@@ -316,3 +316,9 @@ body {
 
 - 效能比較好
 - IE8 以下不支援
+
+## 縮放
+
+`scale.html`
+
+`scale_image.html`
