@@ -56,3 +56,24 @@
 ## 影格速度曲線
 
 `animation-timing-function.html`
+
+## 播放次數
+
+```css
+.some {
+    /* 無限撥放 */
+    animation-iteration-count: infinite;
+
+    /* 播放1次，預設值 */
+    animation-iteration-count: 1;
+}
+```
+
+## 影格模式
+
+`animation-fill-mode`
+
+- `none` -> 停留當下樣式，預設值。
+- `forwards` -> 停留最後影格。
+- `backwards` -> 停留開始影格。
+- `both` -> 結合`forwards`與`backwards`特性。(常用)

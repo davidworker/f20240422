@@ -41,7 +41,13 @@
 .wrap .cube.active {
     animation-name: move;
     animation-duration: 3s;
-    animation-delay: 1500ms;
+    /* animation-iteration-count: infinite; */
+    /* animation-fill-mode: none; */
+    /* animation-fill-mode: forwards; */
+    /* animation-fill-mode: backwards; */
+    animation-fill-mode: both;
+    /* left: calc(100% - var(--cube-size)); */
+    /* animation-delay: 1500ms; */
     /* 1.5s */
 }
 
