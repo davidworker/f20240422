@@ -41,6 +41,8 @@
 .wrap .cube.active {
     animation-name: move;
     animation-duration: 3s;
+    animation-delay: 1500ms;
+    /* 1.5s */
 }
 
 
