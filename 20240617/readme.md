@@ -77,3 +77,12 @@
 - `forwards` -> 停留最後影格。
 - `backwards` -> 停留開始影格。
 - `both` -> 結合`forwards`與`backwards`特性。(常用)
+
+## 影格執行方向
+
+`animation-direction`
+
+- `normal` -> 順向 0% -> 100% 預設值。
+- `reverse` -> 反向 100% -> 0%。
+- `alternate` -> 順向輪播，奇數 0% -> 100%，偶數 100% -> 0%。
+- `reverse-alternate` -> 反向輪播，奇數 100% -> 0%，偶數 0% -> 100%。
