@@ -1,6 +1,7 @@
 html,
 body {
     background: #3060fc;
+    overflow: hidden;
 }
 
 .cloud {
@@ -11,6 +12,10 @@ body {
     height: 100px;
     background: #fff;
     border-radius: 1000px;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .cloud::after {
@@ -39,10 +44,22 @@ body {
     top: 400px;
     left: 200px;
     transform: scale(0.8);
+    animation-duration: 6s;
 }
 
 .cloud.i3 {
     top: 600px;
     left: 50px;
     transform: scale(0.5);
+    animation-duration: 3s;
+}
+
+@keyframes move {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: 100%;
+    }
 }
