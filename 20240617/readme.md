@@ -24,3 +24,31 @@
 ```
 
 `animation.html`
+
+## 變數
+
+使用變數可更彈性的修改數值與連動
+
+```css
+:root {
+    --cube-size: 50px
+}
+
+/* ... */
+
+.wrap .cube {
+    /* ... */
+    width: var(--cube-size);
+    height: var(--cube-size);
+}
+
+@keyframes move {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(100% - var(--cube-size));
+    }
+}
+```
