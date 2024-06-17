@@ -1,0 +1,14 @@
+html,
+body {
+    background: #3060fc;
+}
+
+.cloud {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    width: 500px;
+    height: 100px;
+    background: #fff;
+    border-radius: 1000px;
+}
