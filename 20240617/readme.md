@@ -86,3 +86,7 @@
 - `reverse` -> 反向 100% -> 0%。
 - `alternate` -> 順向輪播，奇數 0% -> 100%，偶數 100% -> 0%。
 - `reverse-alternate` -> 反向輪播，奇數 100% -> 0%，偶數 0% -> 100%。
+
+## AOS 套件
+
+https://michalsnik.github.io/aos/
