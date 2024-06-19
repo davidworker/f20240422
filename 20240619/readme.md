@@ -27,3 +27,71 @@
 - copy js/bootstrap.min.js
 
 `bs5.html`
+
+## grid
+
+`.row > .col`
+
+### `.col` 本身為範圍定義，不做任何樣式呈現
+
+異常
+
+```html
+<div class="row">
+    <div class="col bg-danger text-white">01</div>
+    <div class="col bg-danger text-white">02</div>
+    <div class="col bg-danger text-white">03</div>
+    <div class="col bg-danger text-white">04</div>
+    <div class="col bg-danger text-white">05</div>
+    <div class="col bg-danger text-white">06</div>
+    <div class="col bg-danger text-white">07</div>
+    <div class="col bg-danger text-white">08</div>
+    <div class="col bg-danger text-white">09</div>
+    <div class="col bg-danger text-white">10</div>
+    <div class="col bg-danger text-white">11</div>
+    <div class="col bg-danger text-white">12</div>
+</div>
+```
+
+正常
+
+```html
+<div class="row">
+    <div class="col">
+        <div class="bg-danger text-white">01</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">02</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">03</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">04</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">05</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">06</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">07</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">08</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">09</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">10</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">11</div>
+    </div>
+    <div class="col">
+        <div class="bg-danger text-white">12</div>
+    </div>
+</div>
+```
