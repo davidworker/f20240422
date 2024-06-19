@@ -95,3 +95,52 @@
     </div>
 </div>
 ```
+
+### 格數
+
+`col-{1,12}`
+
+### 依據breakpoints
+
+`col-{infix}-{1,12}`
+
+```html
+<div class="row">
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">01</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">02</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">03</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">04</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">05</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">06</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">07</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">08</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">09</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">10</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">11</div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-1">
+        <div class="bg-danger text-white">12</div>
+    </div>
+</div>
+```
