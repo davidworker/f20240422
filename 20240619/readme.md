@@ -161,3 +161,64 @@ https://getbootstrap.com/docs/5.3/layout/containers/#how-they-work
 ## 使用 bootstrap 重新製作 one page
 
 `bs5_one_page.html`
+
+
+## display
+
+使用 `d-{infix}-*`
+
+- `d-block` -> `display:block`
+- `d-flex` -> `display:flex`
+- `d-grid` -> `display:grid`
+- `d-inline` -> `display:inline`
+
+https://getbootstrap.com/docs/5.3/utilities/display/
+
+## flex
+
+- `align-items-*`
+- `justify-content-*`
+
+https://getbootstrap.com/docs/5.3/utilities/flex/
+
+## 完成 header
+
+```html
+<div class="header">
+    <div class="container">
+        <div class="cotainer-fluid bg-white p-3">
+            <div class="navbar navbar-expand-lg">
+                <div>
+                    <img src="./assets/images/logo.svg" alt="">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="en">about us</div>
+                                <div class="tw">關於大尾</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="en">join us</div>
+                                <div class="tw">加入大尾</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="en">courses</div>
+                                <div class="tw">課程總覽</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
