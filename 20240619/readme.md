@@ -222,3 +222,16 @@ https://getbootstrap.com/docs/5.3/utilities/flex/
     </div>
 </div>
 ```
+
+## 導角
+
+`rounded-{1,5}`
+
+https://getbootstrap.com/docs/5.3/utilities/borders/
+
+
+## position
+
+`position-*`
+
+https://getbootstrap.com/docs/5.3/utilities/position/#position-values
