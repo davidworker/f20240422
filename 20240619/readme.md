@@ -144,3 +144,20 @@
     </div>
 </div>
 ```
+
+## navbar
+
+列表呈現元件
+
+https://getbootstrap.com/docs/5.3/components/navbar/#nav
+
+## container-fluid
+
+自帶`flex`與`justify-content:space-between`
+
+https://getbootstrap.com/docs/5.3/layout/containers/#how-they-work
+
+
+## 使用 bootstrap 重新製作 one page
+
+`bs5_one_page.html`
