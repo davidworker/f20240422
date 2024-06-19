@@ -235,3 +235,21 @@ https://getbootstrap.com/docs/5.3/utilities/borders/
 `position-*`
 
 https://getbootstrap.com/docs/5.3/utilities/position/#position-values
+
+## 第一頁
+
+```html
+ <div class="page vh-100 position-relative"
+    style="background-image:url(./assets/images/banner.jpeg); background-size: cover;">
+    <div class="mask position-absolute bg-dark w-100 h-100 opacity-25"></div>
+    <div
+        class="content position-relative z-1 text-white d-flex align-items-center justify-content-center w-100 h-100">
+        <div class="container">
+            <div class="d-flex justify-content-between bg-primary">
+                <div>1</div>
+                <div>2</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
