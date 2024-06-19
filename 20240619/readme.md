@@ -253,3 +253,52 @@ https://getbootstrap.com/docs/5.3/utilities/position/#position-values
     </div>
 </div>
 ```
+
+## form
+
+https://getbootstrap.com/docs/5.3/forms/overview/
+
+```html
+<div class="mb-2">
+    <label for="" class="form-label">姓名</label>
+    <input type="text" class="form-control">
+</div>
+```
+
+## button
+
+https://getbootstrap.com/docs/5.3/components/buttons/
+
+`btn btn-primary`
+
+
+## modal
+
+https://getbootstrap.com/docs/5.3/components/modal/
+
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    送出
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">送出確認</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                確認資料無誤?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+`data-bs-target="#exampleModal` 對應 `id="exampleModal"`
