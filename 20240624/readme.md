@@ -113,3 +113,34 @@ console.log(t1); // I'm "David"
 ```
 
 `\`為跳脫字元，將有特殊涵意轉為一般文字
+
+### 數字
+
+包含整數跟浮點數
+
+```js
+let n1 = 1;
+let n2 = 1.25;
+let n3 = n1 + n2;
+
+console.log(n1, n2, n3);
+```
+
+### 文字與數字
+
+只要運算過程遇到一個字串型態，全部會被轉為字串處理。
+
+```js
+let n = 1
+let s = '10'
+let ns = n + s
+console.log(ns, typeof ns)
+```
+
+## 字串數字轉數字型態
+
+```js
+let sn = '10';
+let n1 = parseInt(sn, 10);
+let n2 = +sn;
+```
