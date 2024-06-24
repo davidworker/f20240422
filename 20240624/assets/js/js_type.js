@@ -25,3 +25,11 @@ console.log(snToNum, typeof snToNum)
 
 let snToNumFast = +sn;
 console.log(snToNumFast, typeof snToNumFast)
+
+
+n1 = 100;
+
+console.log(n1, typeof n1);
+
+let sn1 = n1.toString();
+console.log(sn1, typeof sn1);

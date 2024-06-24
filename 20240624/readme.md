@@ -144,3 +144,10 @@ let sn = '10';
 let n1 = parseInt(sn, 10);
 let n2 = +sn;
 ```
+
+## 數字轉文字
+
+```js
+let num = 10;
+let sn = num.toString();
+```
