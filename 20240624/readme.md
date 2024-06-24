@@ -90,3 +90,26 @@ console.table(nums);
 ```js
 console.log('%c鴨沒肉！！！\n%c我只是亂喊一下啦~', 'color:red;font-size:20px;', 'color:#dedede')
 ```
+
+## 型態
+
+### 文字
+
+使用`'`或是`"`將文字包起來
+
+
+```js
+let firstName = 'Lin';
+let lastName = 'David';
+let fullName = firstName + ' ' + lastName;
+// let fullName = 'firstName' + ' ' + lastName;
+console.log(fullName);
+
+// let error_1 = 'Lin";
+
+
+let t1 = "I'm \"David\"";
+console.log(t1); // I'm "David"
+```
+
+`\`為跳脫字元，將有特殊涵意轉為一般文字
