@@ -195,3 +195,27 @@ students.splice(findIndex, num);
 - findIndex 從第幾個索引
 - num 砍幾個
 - findIndex 為負數時，從後面推算
+
+
+### 物件
+
+- 定義資料結構
+- 可與陣列合併使用，呈現資料庫結構
+
+```js
+let appedu_students = [];
+
+appedu_students.push({
+    name: 'David',
+    city: '台中',
+    gender: '男'
+});
+
+appedu_students.push({
+    name: 'Helen',
+    city: '高雄',
+    gender: '女'
+});
+
+console.table(appedu_students)
+```

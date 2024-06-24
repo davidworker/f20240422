@@ -59,5 +59,30 @@ console.log(findIndex);
 
 students.splice(findIndex, 1);
 
+let student_name = 'David';
+let student_age = 18;
+let student_score = 100;
 
-console.log(students)
+
+let student = {
+    name: 'David',
+    age: 18,
+    score: 100
+};
+
+let appedu_students = [];
+
+appedu_students.push({
+    name: 'David',
+    city: '台中',
+    gender: '男'
+});
+
+appedu_students.push({
+    name: 'Helen',
+    city: '高雄',
+    gender: '女'
+});
+
+console.log(appedu_students)
+console.table(appedu_students)
