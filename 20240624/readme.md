@@ -137,7 +137,7 @@ let ns = n + s
 console.log(ns, typeof ns)
 ```
 
-## 字串數字轉數字型態
+### 字串數字轉數字型態
 
 ```js
 let sn = '10';
@@ -145,9 +145,53 @@ let n1 = parseInt(sn, 10);
 let n2 = +sn;
 ```
 
-## 數字轉文字
+### 數字轉文字
 
 ```js
 let num = 10;
 let sn = num.toString();
 ```
+
+### 陣列
+
+- 使用`[]`宣告
+- 索引`index`從`0`開始
+
+#### 插入最後
+
+```js
+let students = [100, 60, 38, 88];
+students.push(70);
+```
+
+#### 插入第一個
+
+```js
+let students = [100, 60, 38, 88];
+students.unshift(66);
+```
+
+#### 轉為文字
+
+```js
+let str = students.join(',');
+```
+
+#### 尋找
+
+```js
+let findIndex = students.indexOf(100);
+```
+
+***沒找到回傳-1***
+
+#### 刪除
+
+```js
+let num = 1;
+students.splice(findIndex, num);
+```
+
+- findIndex 從第幾個索引
+- num 砍幾個
+- findIndex 為負數時，從後面推算
