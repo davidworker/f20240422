@@ -110,3 +110,73 @@ const addCalc = () => {
 
 calc1Btn.addEventListener('click', addCalc);
 ```
+
+## 減法
+
+```js
+const substructCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    let result = num[0] - num[1];
+    response.innerHTML = `${num[0]} - ${num[1]} = ${result}`;
+    done();
+}
+```
+
+## 乘法
+
+```js
+const multiplyCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    let result = num[0] * num[1];
+    response.innerHTML = `${num[0]} * ${num[1]} = ${result}`;
+    done();
+}
+```
+
+## 除法
+
+```js
+const dividedCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    if (num[1] == 0) {
+        alert('分母不可為0');
+        return false;
+    }
+
+    let result = num[0] / num[1];
+    response.innerHTML = `${num[0]} / ${num[1]} = ${result}`;
+    done();
+}
+```
+
+## 餘數
+
+```js
+const remainderCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    if (num[1] == 0) {
+        alert('分母不可為0');
+        return false;
+    }
+
+    let result = num[0] % num[1];
+    response.innerHTML = `${num[0]} % ${num[1]} = ${result}`;
+    done();
+}
+```
