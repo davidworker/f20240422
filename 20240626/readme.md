@@ -17,3 +17,30 @@ let dom = document.querySelector(selector);
 let selector = '#some';
 let items = document.querySelectorAll(selector);
 ```
+
+## 取得內容
+
+內容指的是`<div>內容</div>`
+
+```js
+let some = document.querySelector('#some');
+let text = some.innerHTML;
+```
+
+## 取得數值
+
+數值指的是`<input value="">`
+
+```js
+let input = document.querySelector('#account');
+let value = input.value;
+```
+
+## 事件監聽
+
+```js
+let getAccountBtn = document.querySelector('#get-account');
+getAccountBtn.addEventListener('click', () => {
+    cosole.log('click');
+})
+```
