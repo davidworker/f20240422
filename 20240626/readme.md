@@ -78,6 +78,18 @@ if (a - b) {
 usernameInput.focus();
 ```
 
+## 附加 class
+
+```js
+dom.classList.add('classname');
+```
+
+## 移除 class
+
+```js
+dom.classList.remove('classname');
+```
+
 ## 加法
 
 `math.html`
