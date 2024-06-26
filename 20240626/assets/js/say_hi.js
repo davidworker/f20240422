@@ -7,9 +7,12 @@ const sayHi = () => {
     if (name) {
         let message = `Hi, ${name}.`;
         responseBlock.innerHTML = message;
+        usernameInput.value = '';
     } else {
         alert('Input your name');
     }
+
+    usernameInput.focus();
 }
 
 sayBtn.addEventListener('click', sayHi)

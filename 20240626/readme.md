@@ -71,3 +71,30 @@ if (a - b) {
 }
 
 ```
+
+## 鎖定輸入框
+
+```js
+usernameInput.focus();
+```
+
+## 加法
+
+`math.html`
+
+```js
+const addCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    let result = num[0] + num[1];
+    response.innerHTML = `${num[0]} + ${num[1]} = ${result}`;
+    response.classList.add('d-block');
+    response.classList.remove('d-none');
+}
+
+
+calc1Btn.addEventListener('click', addCalc);
+```
