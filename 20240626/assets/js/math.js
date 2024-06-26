@@ -32,6 +32,13 @@ const getNum = () => {
     return [n1, n2]
 }
 
+const done = () => {
+    response.classList.add('d-block');
+    response.classList.remove('d-none');
+    num1Input.value = '';
+    num2Input.value = '';
+}
+
 const addCalc = () => {
     let num = getNum();
     if (!num) {
@@ -40,9 +47,37 @@ const addCalc = () => {
 
     let result = num[0] + num[1];
     response.innerHTML = `${num[0]} + ${num[1]} = ${result}`;
-    response.classList.add('d-block');
-    response.classList.remove('d-none');
+    done();
+}
+
+const substructCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    let result = num[0] - num[1];
+    response.innerHTML = `${num[0]} - ${num[1]} = ${result}`;
+    done();
+}
+
+const multiplyCalc = () => {
+    let num = getNum();
+    if (!num) {
+        return false;
+    }
+
+    let result = num[0] * num[1];
+    response.innerHTML = `${num[0]} * ${num[1]} = ${result}`;
+    done();
+}
+
+const dividedCalc = () => {
+
 }
 
 
 calc1Btn.addEventListener('click', addCalc);
+calc2Btn.addEventListener('click', substructCalc);
+calc3Btn.addEventListener('click', multiplyCalc);
+calc4Btn.addEventListener('click', dividedCalc);
