@@ -180,3 +180,5 @@ const remainderCalc = () => {
     done();
 }
 ```
+
+NEXT 改用下拉選單實作計算

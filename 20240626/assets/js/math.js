@@ -7,6 +7,8 @@ let calc3Btn = document.querySelector('#calc-3');
 let calc4Btn = document.querySelector('#calc-4');
 let calc5Btn = document.querySelector('#calc-5');
 
+let typeSelect = document.querySelector('#type');
+
 let response = document.querySelector('#response');
 
 const getNum = () => {
@@ -110,3 +112,11 @@ calc2Btn.addEventListener('click', substructCalc);
 calc3Btn.addEventListener('click', multiplyCalc);
 calc4Btn.addEventListener('click', dividedCalc);
 calc5Btn.addEventListener('click', remainderCalc);
+
+const runCalc = () => {
+    let type = typeSelect.value;
+    if (type == '+') {
+        addCalc();
+    }
+}
+typeSelect.addEventListener('change', runCalc);
