@@ -44,3 +44,7 @@ getAccountBtn.addEventListener('click', () => {
     cosole.log('click');
 })
 ```
+
+## Say hi 練習
+
+`say_hi.html`
