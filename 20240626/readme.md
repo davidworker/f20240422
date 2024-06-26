@@ -48,3 +48,26 @@ getAccountBtn.addEventListener('click', () => {
 ## Say hi 練習
 
 `say_hi.html`
+
+## 判斷式
+
+```js
+let condition = true;
+if (condition) {
+    console.log('ok');
+} else {
+    console.log('no');
+}
+
+
+let a = 10;
+let b = 20;
+
+console.log(`a: ${a}, b: ${b}, a - b`);
+if (a - b) {
+    console.log('ok') // here.
+} else {
+    console.log('no')
+}
+
+```
