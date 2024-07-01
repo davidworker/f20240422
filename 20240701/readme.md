@@ -47,3 +47,54 @@ if (n1 = n2) {
 
 console.log(`n1: ${n1}, n2: ${n2}`);
 ```
+
+***使用`===`連同型態一起比較***
+
+## 不相等運算子
+
+`!=`
+
+***使用`!==`連同型態一起比較***
+
+## 大於運算子
+
+`>`
+
+## 大於等於運算子
+
+`>=`
+
+## 小於運算子
+
+`<`
+
+## 小於等於運算子
+
+`<=`
+
+## 及閘(AND)
+
+條件同時成立時為真，使用`&&`符號
+
+```js
+let student = {
+    name: 'David',
+    s1: 50,
+    s2: 100
+}
+
+// david 所有科目都及格嗎?
+
+
+/**
+ * 1. student.s1 >= 60 => boolA
+ * 2. student.s2 >= 60 => boolB
+ * 3. boolA && boolB => boolC
+ * 4. if (boolC) {}
+ */
+if (student.s1 >= 60 && student.s2 >= 60) {
+    console.log(`${student.name} all pass.`);
+} else {
+    console.log(`${student.name} not pass.`);
+}
+```
