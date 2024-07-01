@@ -98,3 +98,45 @@ if (student.s1 >= 60 && student.s2 >= 60) {
     console.log(`${student.name} not pass.`);
 }
 ```
+
+## 或閘(OR)
+
+條件其中一個成立時為真，使用`||`符號
+
+```js
+// david 是否有科目不及格?
+
+if (student.s1 < 60 || student.s2 < 60) {
+    console.log('yes');
+} else {
+    console.log('all pass')
+}
+```
+
+## 反閘(NOT)
+
+`!`符號
+
+```html
+<div class="form-group">
+    <label for="gogo" class="form-label">勾勾</label>
+    <input type="checkbox" class="form-checkbox" id="gogo">
+</div>
+
+<div>
+    <button class="btn btn-primary" id="gogo-trigger">切換</button>
+</div>
+```
+
+```js
+let gogoTrigger = document.querySelector('#gogo-trigger');
+let gogoCheckbox = document.querySelector('#gogo');
+
+
+gogoTrigger.addEventListener('click', () => {
+    let checked = gogoCheckbox.checked;
+    console.log(checked);
+    gogoCheckbox.checked = !checked;
+    console.log(gogoCheckbox.checked);
+})
+```
