@@ -93,3 +93,13 @@ do {
 
 console.log(num);
 ```
+
+## 生命週期
+
+- function 內的變數異動，不可異動 function 外的變數
+- function 參數會自動處理 `let c1 = c1` 變為內部變數
+- function 內宣告變數一定要使用`let`，否則變數會外洩
+- 變數數值指定方式為 `call by value` 兩變數無關聯
+- 陣列與物件變數指定方式為 `call by reference` 兩變數共用同一筆資料
+
+`life.js`
