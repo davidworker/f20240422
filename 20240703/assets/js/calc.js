@@ -17,15 +17,51 @@ let run = document.querySelector('#run');
 
 let result = document.querySelector('#result');
 
+let n1 = 0;
+let n2 = 0;
+let op = '';
+
+const setResult = () => {
+    let html = n1;
+    if (op) {
+        html += op;
+        if (n2) {
+            html += n2;
+        }
+    }
+
+    result.innerHTML = html;
+}
+
 num0.addEventListener('click', () => {
-    result.innerHTML += 0;
-    result.innerHTML = +result.innerHTML;
+    if (op) {
+        n2 += '0';
+        n2 = +n2;
+    } else {
+        n1 += '0';
+        n1 = +n1;
+    }
+
+    setResult();
+
+    // result.innerHTML += 0;
+    // result.innerHTML = +result.innerHTML;
     console.log(0);
 })
 
 num1.addEventListener('click', () => {
-    result.innerHTML += 1;
-    result.innerHTML = +result.innerHTML;
+    if (op) {
+        n2 += '1';
+        n2 = +n2;
+    } else {
+        n1 += '1';
+        n1 = +n1;
+    }
+
+    setResult();
+
+    // result.innerHTML += 1;
+    // result.innerHTML = +result.innerHTML;
     console.log(1);
 })
 
@@ -78,23 +114,34 @@ num9.addEventListener('click', () => {
 })
 
 sp1.addEventListener('click', () => {
+    op = '/';
+    setResult();
     console.log('sp1');
 })
 
 sp2.addEventListener('click', () => {
+    op = '*';
+    setResult();
     console.log('sp2');
 })
 
 sp3.addEventListener('click', () => {
+    op = '-';
+    setResult();
     console.log('sp3');
 })
 
 sp4.addEventListener('click', () => {
+    op = '+';
+    setResult();
     console.log('sp4');
 })
 
 reset.addEventListener('click', () => {
-    result.innerHTML = 0
+    n1 = 0;
+    n2 = 0;
+    op = '';
+    setResult();
     console.log('reset');
 })
 
