@@ -50,3 +50,46 @@ const useArrayForeach = () => {
     })
 }
 ```
+
+### while
+
+- 容易形成無限迴圈
+- 建議使用 for loop 替代
+
+```js
+let num = 0;
+
+console.log(`run while before num is: ${num}`)
+
+while (num < 10) {
+    console.log(num);
+    num++;
+}
+
+console.log(`run while after num is: ${num}`)
+
+num = 0
+console.log(`run for loop before num is: ${num}`)
+for (; num < 10; num++) {
+    console.log(num);
+}
+
+console.log(`run for loop after num is: ${num}`)
+```
+
+### do...while
+
+- 先執行一次在判斷
+- 容易形成無限迴圈
+- 建議使用 for loop 替代
+
+```js
+let num = 10;
+
+do {
+    console.log(num);
+    num++
+} while (num < 10)
+
+console.log(num);
+```
