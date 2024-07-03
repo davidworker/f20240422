@@ -15,43 +15,65 @@ let sp4 = document.querySelector('#sp4');
 let reset = document.querySelector('#reset');
 let run = document.querySelector('#run');
 
+let result = document.querySelector('#result');
+
 num0.addEventListener('click', () => {
+    result.innerHTML += 0;
+    result.innerHTML = +result.innerHTML;
     console.log(0);
 })
 
 num1.addEventListener('click', () => {
+    result.innerHTML += 1;
+    result.innerHTML = +result.innerHTML;
     console.log(1);
 })
 
 num2.addEventListener('click', () => {
+    result.innerHTML += 2;
+    result.innerHTML = +result.innerHTML;
     console.log(2);
 })
 
 num3.addEventListener('click', () => {
+    result.innerHTML += 3;
+    result.innerHTML = +result.innerHTML;
     console.log(3);
 })
 
 num4.addEventListener('click', () => {
+    result.innerHTML += 4;
+    result.innerHTML = +result.innerHTML;
     console.log(4);
 })
 
 num5.addEventListener('click', () => {
+    result.innerHTML += 5;
+    result.innerHTML = +result.innerHTML;
     console.log(5);
 })
 
 num6.addEventListener('click', () => {
+    result.innerHTML += 6;
+    result.innerHTML = +result.innerHTML;
     console.log(6);
 })
 
 num7.addEventListener('click', () => {
+    result.innerHTML += 7;
+    result.innerHTML = +result.innerHTML;
     console.log(7);
 })
 
 num8.addEventListener('click', () => {
+    result.innerHTML += 8;
+    result.innerHTML = +result.innerHTML;
     console.log(8);
 })
 
 num9.addEventListener('click', () => {
+    result.innerHTML += 9;
+    result.innerHTML = +result.innerHTML;
     console.log(9);
 })
 
@@ -72,6 +94,7 @@ sp4.addEventListener('click', () => {
 })
 
 reset.addEventListener('click', () => {
+    result.innerHTML = 0
     console.log('reset');
 })
 

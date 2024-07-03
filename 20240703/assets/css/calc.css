@@ -62,6 +62,7 @@ ul {
     font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
+    user-select: none;
 }
 
 .keyboard>div:hover {
