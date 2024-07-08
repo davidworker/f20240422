@@ -117,5 +117,6 @@ cLink.addEventListener(clickType, clickCallback)
 - keypress 會慢一拍
 - 通常使用 keyup 執行內容操作
 
+## 觸發按鍵抓取
 
-
+`calc_key_event.html`

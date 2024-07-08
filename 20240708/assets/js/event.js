@@ -15,6 +15,10 @@ cLink.addEventListener(clickType, clickCallback)
 
 let chAccount = document.querySelector('#ch-account');
 
+const filterAccount = () => {
+    chAccount.value = chAccount.value.substr(0, 8);
+}
+
 
 
 chAccount.addEventListener('blur', () => {
@@ -22,14 +26,14 @@ chAccount.addEventListener('blur', () => {
 })
 
 chAccount.addEventListener('change', () => {
-    chAccount.value = chAccount.value.substr(0, 8);
+    filterAccount();
 })
 
 chAccount.addEventListener('keypress', () => {
     console.log(`trigger keypress value is: ${chAccount.value}`)
 })
 
-chAccount.addEventListener('keyup', () => {
-    console.log(`trigger keyup value is: ${chAccount.value}`)
-    // 實作 8位數過濾
+chAccount.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    filterAccount();
 })
