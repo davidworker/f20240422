@@ -9,6 +9,7 @@ result.classList.add('d-none')
 const ifSolution = (value) => {
     let level = '不及格';
 
+    // issue fix.
     if (value >= 90) {
         level = '甲';
     }
@@ -64,9 +65,9 @@ const mappingSolution = (value) => {
 
 const calc = () => {
     let value = scope.value;
-    // let level = ifSolution(value);
+    let level = ifSolution(value);
+    // let level = switchSolution(value);
     // let level = mappingSolution(value);
-    let level = switchSolution(value);
 
 
     // 實作等及判斷
