@@ -61,3 +61,55 @@ run.addEventListener('click', () => {
     setResult();
 })
 ```
+
+## 事件綁定
+
+```js
+let dom = document.querySelector('#dom')
+
+dom.addEventListener('click', (e) => {
+    console.log(e)
+})
+```
+
+原型
+
+```js
+let dom = {
+    addEventListener(type, callback) {
+        console.log(type);
+        console.log(callback)
+        callback();
+    }
+}
+```
+
+## 點擊事件
+
+`event.html`
+
+```html
+<div>
+    <a href="https://www.google.com/" target="_blank" class="btn btn-success mr-1" id="c-link">to google</a>
+    <button class="btn btn-primary" id="c-btn">按鈕</button>
+</div>
+```
+
+```js
+let cBtn = document.querySelector('#c-btn');
+let cLink = document.querySelector('#c-link');
+
+const clickType = 'click'
+const clickCallback = () => {
+    console.log('clicked.')
+}
+
+cBtn.addEventListener(clickType, clickCallback)
+cLink.addEventListener(clickType, clickCallback)
+
+// cBtn.addEventListener(clickType, () => {
+//     console.log('clicked.')
+// })
+```
+
+
