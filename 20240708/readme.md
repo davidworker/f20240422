@@ -112,4 +112,10 @@ cLink.addEventListener(clickType, clickCallback)
 // })
 ```
 
+## keypress keyup 差別
+
+- keypress 會慢一拍
+- 通常使用 keyup 執行內容操作
+
+
 
