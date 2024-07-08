@@ -122,3 +122,7 @@ cLink.addEventListener(clickType, clickCallback)
 `calc_key_event.html`
 
 - 使用 `String.toUpperCase()` 轉成大寫後再判斷
+
+## 事件結合等級判斷實作
+
+`scope_to_level.html`
