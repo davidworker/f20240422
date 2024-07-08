@@ -120,3 +120,5 @@ cLink.addEventListener(clickType, clickCallback)
 ## 觸發按鍵抓取
 
 `calc_key_event.html`
+
+- 使用 `String.toUpperCase()` 轉成大寫後再判斷
