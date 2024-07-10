@@ -85,3 +85,15 @@ const ifSolutionFix2 = (value) => {
 ## TODO APP UI
 
 `todo.html`
+
+## sweetalert2 套件
+
+https://sweetalert2.github.io/#download
+
+## 非同步同步化
+
+```js
+async () => {
+    await Swal.fire({})
+}
+```
