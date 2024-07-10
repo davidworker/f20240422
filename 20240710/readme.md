@@ -77,3 +77,7 @@ const ifSolutionFix2 = (value) => {
 - second 單位為 ms, 1000ms = 1s
 - 回傳數字，代表計時器編號
 - 使用 `clearInterval(計時器編號)` 取消計時
+
+## 電子鐘實作
+
+`clock.html`
