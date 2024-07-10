@@ -59,3 +59,21 @@ const ifSolutionFix2 = (value) => {
 ## 預設行為中斷
 
 `e.preventDefault();`
+
+## 單次計時器
+
+`setTimeout(callback, second)`
+
+- callback 為函數
+- second 單位為 ms, 1000ms = 1s
+- 回傳數字，代表計時器編號
+- 使用 `clearTimeout(計時器編號)` 取消計時
+
+## 重複計時器
+
+`setInterval(callback, second)`
+
+- callback 為函數
+- second 單位為 ms, 1000ms = 1s
+- 回傳數字，代表計時器編號
+- 使用 `clearInterval(計時器編號)` 取消計時
