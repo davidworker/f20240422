@@ -1,7 +1,12 @@
 let addBtn = document.querySelector('#add-btn');
 let ul = document.querySelector('#menu');
 
+document.addEventListener('click', (e) => {
+    console.log('document click', e)
+})
+
 ul.addEventListener('click', (e) => {
+    e.stopPropagation();
     let target = e.target;
     let html = target.innerHTML
     let tag = target.tagName
@@ -38,3 +43,12 @@ addBtn.addEventListener('click', () => {
 })
 
 // bindLiClick();
+
+let openMenu = document.querySelector('#open-menu');
+
+openMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('open menu!');
+    console.log(openMenu.href);
+    location.href = openMenu.href;
+})

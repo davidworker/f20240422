@@ -51,3 +51,11 @@ const ifSolutionFix2 = (value) => {
 ## 事件氣泡範例
 
 `event_bubble.html`
+
+## 氣泡中斷
+
+`e.stopPropagation();`
+
+## 預設行為中斷
+
+`e.preventDefault();`
