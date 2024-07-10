@@ -47,3 +47,7 @@ const ifSolutionFix2 = (value) => {
     return '不及格';
 }
 ```
+
+## 事件氣泡範例
+
+`event_bubble.html`
