@@ -87,3 +87,7 @@ restore();
     console.log(data);
 </script>
 ```
+
+## todo data class
+
+`TodoApp.js`
