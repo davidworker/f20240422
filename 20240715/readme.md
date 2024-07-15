@@ -91,3 +91,9 @@ restore();
 ## todo data class
 
 `TodoApp.js`
+
+## todo data and storage combine
+
+`TodoApp.js`
+
+`TodoStorage.js`
