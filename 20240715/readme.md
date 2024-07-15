@@ -40,3 +40,33 @@ const addItem = (name) => {
     todo.innerHTML += li;
 }
 ```
+
+## local storage
+
+寫入
+
+```js
+localStorage.setItem('key', 'value');
+```
+
+讀取
+
+```js
+localStorage.getItem('key');
+```
+
+todo 擴充
+
+```js
+const save = (data) => {
+    localStorage.setItem('todo-app', data);
+}
+
+const restore = () => {
+    let data = localStorage.getItem('todo-app');
+    todo.innerHTML = data;
+}
+
+
+restore();
+```
