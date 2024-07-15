@@ -97,3 +97,7 @@ restore();
 `TodoApp.js`
 
 `TodoStorage.js`
+
+## todo checked storage
+
+`TodoApp.js`
