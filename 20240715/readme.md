@@ -70,3 +70,20 @@ const restore = () => {
 
 restore();
 ```
+
+## todo storage class
+
+方便在不同頁面上取得共同資料
+
+`TodoStorage.js`
+
+使用方式
+
+```html
+<script type="module">
+    import { TodoStorage } from './assets/js/TodoStorage.js'
+
+    let data = TodoStorage.read();
+    console.log(data);
+</script>
+```
