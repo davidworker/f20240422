@@ -101,3 +101,9 @@ restore();
 ## todo checked storage
 
 `TodoApp.js`
+
+## todo add uid
+
+`todo.js`
+`TodoApp.js`
+`TodoStorage.js`
