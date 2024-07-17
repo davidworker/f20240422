@@ -104,3 +104,27 @@ domUpload.addEventListener('click', async () => {
     domPreview.src = preview;
 })
 ```
+
+## 圖片上傳
+
+```js
+const doUploadFile = async (url, file) => {
+    if (!file) {
+        return;
+    }
+
+    let form = new FormData();
+    form.append('action', 'upload');
+    form.append('file', file);
+    // <input type="hidden" name="action" value="upload">
+    // <input type="file" name="file">
+
+    let options = {
+        method: 'POST',
+        body: form,
+    }
+
+    let response = await fetch(url, options);
+    return await response.json();
+}
+```
