@@ -52,3 +52,55 @@ if (type[0] != 'image') {
 
 console.log(file);
 ```
+
+## 圖片預覽與大小限制
+
+```js
+const previewImage = (file) => {
+    return new Promise((resolve, reject) => {
+        let reader = new FileReader;
+        reader.onload = () => {
+            return resolve(reader.result)
+        }
+        reader.readAsDataURL(file); // base64 encode 非加密
+
+        // encrypt 加密
+    })
+}
+
+domUpload.addEventListener('click', async () => {
+    let url = 'https://book.niceinfos.com/frontend/api/';
+    let file = domFile.files[0];
+
+    if (!file) {
+        return;
+    }
+
+    let type = file.type.split('/');
+    if (type[0] != 'image') {
+        Swal.fire({
+            title: '格式錯誤',
+            html: '只允許圖片類型',
+            icon: 'error'
+        })
+        domFile.value = '';
+        return;
+    }
+
+    let sizeMB = file.size / 1024 / 1024;
+
+    if (sizeMB > 5) {
+        Swal.fire({
+            title: '圖片太大了',
+            html: '只允許5MB以下圖片',
+            icon: 'error'
+        })
+        return;
+    }
+
+    console.log(file);
+    let preview = await previewImage(file);
+    console.log(preview);
+    domPreview.src = preview;
+})
+```
