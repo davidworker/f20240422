@@ -33,3 +33,22 @@ const doPost = async (url) => {
     return await response.json();
 }
 ```
+
+## 抓取檔案
+
+```js
+let url = 'https://book.niceinfos.com/frontend/api/';
+let file = domFile.files[0];
+let type = file.type.split('/');
+if (type[0] != 'image') {
+    Swal.fire({
+        title: '格式錯誤',
+        html: '只允許圖片類型',
+        icon: 'error'
+    })
+    domFile.value = '';
+    return;
+}
+
+console.log(file);
+```
