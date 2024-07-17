@@ -109,3 +109,44 @@ domUpload.addEventListener('click', async () => {
     let response = await doUploadFile(url, file);
     console.log(response);
 })
+
+class TodoAPI {
+    #uid
+    #api = 'https://book.niceinfos.com/frontend/api/'
+
+    constructor(uid) {
+        this.#uid = uid;
+    }
+
+
+    async read() {
+        let api = `${this.#api}?action=todo&uid=${this.#uid}`
+        let response = await fetch(api)
+        return response.json();
+    }
+
+    async write(data) {
+        let api = `${this.#api}`
+        let params = {
+            action: 'todo',
+            uid: this.#uid,
+            data: data,
+        }
+        let options = {
+            method: 'POST',
+            body: JSON.stringify(params)
+        }
+        let response = await fetch(api, options);
+        return response.json();
+    }
+}
+
+(async () => {
+    let api = new TodoAPI('aaaa');
+    let r = await api.read();
+    console.log(r);
+
+    // let w = await api.write([{ a: 1 }, { a: 2 }]);
+    // console.log(w);
+})();
+
