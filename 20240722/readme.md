@@ -112,3 +112,26 @@ https://vuejs.org/guide/quick-start.html
 ```html
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ```
+
+## Vuejs 掛載
+
+- `vue_app.html`
+- `assers/js/vue/todo.js`
+
+```js
+const options = {
+    data() {
+        return {
+            user: 'David'
+        }
+    },
+    methods: {
+
+    },
+    mounted() {
+        console.log('is mounted.');
+    }
+};
+
+Vue.createApp(options).mount('#todo-app');
+```
