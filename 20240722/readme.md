@@ -95,3 +95,20 @@ export { TodoAPI }
 
 - `todo.html`
 - `todo.js`
+
+
+## Vuejs 初始化
+
+https://vuejs.org/guide/quick-start.html
+
+正式
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+```
+
+開發
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
