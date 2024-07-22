@@ -135,3 +135,60 @@ const options = {
 
 Vue.createApp(options).mount('#todo-app');
 ```
+
+## Vue todo 列表資料綁定
+
+```html
+ <div class="border p-2">
+    <div class="mb-2">代辦列表</div>
+    <ul class="list-group">
+        <template v-for="(item, index) in database">
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" :id="`todo-item-${index}`"
+                        :checked="item.checked">
+                    <label :for="`todo-item-${index}`" class="form-check-label">{{ item.name }}</label>
+                </div>
+            </li>
+        </template>
+    </ul>
+</div>
+```
+
+```js
+const options = {
+    data() {
+        return {
+            newItem: '',
+            database: [],
+        }
+    },
+    methods: {
+
+    },
+    mounted() {
+        console.log('is mounted.');
+        this.database.push({
+            id: 1,
+            name: 'Test1',
+            checked: false
+        })
+
+        this.database.push({
+            id: 2,
+            name: 'Test2',
+            checked: true
+        })
+
+        this.database.push({
+            id: 3,
+            name: 'Test3',
+            checked: true
+        })
+
+        console.log(this.database);
+    }
+};
+
+Vue.createApp(options).mount('#todo-app');
+```
