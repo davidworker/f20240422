@@ -224,3 +224,95 @@ let config = {
 
 ## vue todo 使用 firebase realtime database
 
+## firebase auth
+
+`firebase_app\assets\js\Firebase\Auth.js`
+
+`todo.js`
+
+```js
+let auth = new Auth(app);
+
+const validateEmail = (email) => {
+    return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}
+
+async doRegister() {
+    console.log('register');
+    if (!this.authAccount || !this.authPwd) {
+        Swal.fire({
+            title: '註冊錯誤',
+            html: '未填寫帳號密碼',
+            icon: 'error'
+        })
+        return
+    }
+
+    if (!validateEmail(this.authAccount)) {
+        Swal.fire({
+            title: '帳號錯誤',
+            html: '不合法的Email格式',
+            icon: 'error'
+        })
+        return
+    }
+
+    let response = await auth.register(this.authAccount, this.authPwd);
+    if (response) {
+        Swal.fire({
+            title: '註冊成功',
+            html: '請使用帳號密碼登入',
+            icon: 'success'
+        })
+        this.doLogout();
+    } else {
+        Swal.fire({
+            title: '註冊錯誤',
+            html: '註冊失敗或帳號已存在',
+            icon: 'error'
+        })
+    }
+},
+async doAuth() {
+    console.log('auth');
+    if (!this.authAccount || !this.authPwd) {
+        Swal.fire({
+            title: '登入錯誤',
+            html: '未填寫帳號密碼',
+            icon: 'error'
+        })
+        return
+    }
+
+    if (!validateEmail(this.authAccount)) {
+        Swal.fire({
+            title: '帳號錯誤',
+            html: '不合法的Email格式',
+            icon: 'error'
+        })
+        return
+    }
+
+    let response = await auth.signIn(this.authAccount, this.authPwd);
+    if (response) {
+        Swal.fire({
+            title: '登入成功',
+            html: '',
+            icon: 'success'
+        })
+
+    } else {
+        Swal.fire({
+            title: '登入錯誤',
+            html: '登入失敗或尚未註冊',
+            icon: 'error'
+        })
+    }
+},
+async doLogout() {
+    let response = await auth.signOut();
+    console.log(response);
+}
+```
