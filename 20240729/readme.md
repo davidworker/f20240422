@@ -168,3 +168,36 @@ methods: {
     },
 }
 ```
+
+## 建立 Firebase 專案
+
+- 前往 https://firebase.google.com/
+- 點選由上角的 Go to console
+- 點選 + 符號新增專案
+- 專案名稱輸入唯一名稱(只可輸入英文與數字)
+- 關閉 啟用這項專案的 Google Analytics (分析) 功能
+
+## 啟用 realtime database
+
+- 建構 > Realtime Database
+- 建立資料庫
+- 資料庫位置選擇 美國
+- 安全性規則選擇 以鎖定模式啟動
+
+## 設定 realtime database 規則
+
+- 建構 > Realtime Database
+- 上方 tab 選擇 規則
+- 修改為下方規則後發布
+
+```js
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+
+- 發布完成後會出現警告提示 您的安全性規則定義為公開，因此任何人都能竊取、修改或刪除資料庫中的資料 先不用理他
