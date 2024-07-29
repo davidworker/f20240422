@@ -7,6 +7,7 @@ const options = {
             newItem: '',
             database: [],
             uid: '',
+            autoUpload: true
         }
     },
     methods: {
@@ -42,6 +43,9 @@ const options = {
         },
         save() {
             Storage.setData(this.uid, this.database);
+            if (this.autoUpload) {
+                this.upload(true);
+            }
         },
         setChecked(item) {
             // Call by reference.
@@ -54,11 +58,17 @@ const options = {
             this.database[index].checked = !this.database[index].checked;
             this.save();
         },
-        async upload() {
+        async upload(muted) {
+            console.log(muted);
             console.log('upload data...');
 
             let uid = this.uid;
             let data = Storage.getData(uid);
+            if (muted) {
+                await API.write(uid, data);
+                return;
+            }
+
             Swal.fire({
                 title: "數據上傳中",
                 html: "請勿關閉或重新整理視窗",

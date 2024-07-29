@@ -22,9 +22,19 @@
                     <button class="btn btn-primary w-100" @click="add">加入</button>
                 </div>
             </div>
-            <div class="text-end mb-2">
-                <button class="btn btn-success me-2" @click.prevent="upload">上傳數據</button>
-                <button class="btn btn-danger" @click.prevent="download">下載數據</button>
+            <div class="row mb-2">
+                <div class="col">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="todo-auto-upload" v-model="autoUpload">
+                        <label for="todo-auto-upload" class="form-check-label">自動上傳</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-end">
+                        <button class="btn btn-success me-2" @click.prevent="upload(false)">上傳數據</button>
+                        <button class="btn btn-danger" @click.prevent="download">下載數據</button>
+                    </div>
+                </div>
             </div>
             <div class="border p-2">
                 <div class="mb-2">代辦列表</div>
