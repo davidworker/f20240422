@@ -57,7 +57,7 @@ const options = {
         async upload() {
             console.log('upload data...');
 
-            let uid = Storage.getUid();
+            let uid = this.uid;
             let data = Storage.getData(uid);
             Swal.fire({
                 title: "數據上傳中",
@@ -87,6 +87,33 @@ const options = {
                 }
 
             }, 1000)
+        },
+        async download() {
+            console.log('download data...');
+
+            let uid = this.uid;
+
+            let result = await Swal.fire({
+                title: '下載確認?',
+                html: '現有數據將被覆蓋',
+                icon: 'question',
+                showCancelButton: true,
+                cancelButtonText: '等等',
+                confirmButtonText: '確定'
+            })
+
+            if (!result.isConfirmed) {
+                return;
+            }
+
+            let response = await API.read(uid);
+            Storage.setData(uid, response.data);
+            Swal.fire({
+                title: '下載成功',
+                html: '數據已從雲端下載',
+                icon: 'success'
+            })
+            this.load();
         }
     },
     mounted() {
