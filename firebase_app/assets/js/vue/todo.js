@@ -66,6 +66,9 @@ const options = {
         load() {
             database.listen(this.uid, (data, snapshot) => {
                 console.log('from listen callback.');
+                if (!data) {
+                    data = [];
+                }
                 this.database = data;
             })
             console.log(this.uid);
@@ -112,7 +115,7 @@ const options = {
 
             let response = await auth.register(this.authAccount, this.authPwd);
             if (response) {
-                Swal.fire({
+                await Swal.fire({
                     title: '註冊成功',
                     html: '請使用帳號密碼登入',
                     icon: 'success'
@@ -163,8 +166,8 @@ const options = {
             }
         },
         async doLogout() {
-            let response = await auth.signOut();
-            console.log(response);
+            await auth.signOut();
+            location.reload();
         }
     },
     mounted() {
@@ -174,7 +177,8 @@ const options = {
             console.log(user)
             this.isAuthed = true;
             this.currentEmail = user.email
-            // listen user node.
+            this.uid = user.uid;
+            this.load();
         }, (user) => {
             console.log('unauth')
             console.log(user)

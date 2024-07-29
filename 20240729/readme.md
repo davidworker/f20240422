@@ -316,3 +316,45 @@ async doLogout() {
     console.log(response);
 }
 ```
+
+## 串接個人 realtime database
+
+```js
+load() {
+    database.listen(this.uid, (data, snapshot) => {
+        console.log('from listen callback.');
+        if (!data) {
+            data = [];
+        }
+        this.database = data;
+    })
+    console.log(this.uid);
+
+    // this.database = Storage.getData(this.uid);
+},
+mounted() {
+    console.log('is mounted.');
+    auth.onChange((user) => {
+        console.log('authed')
+        console.log(user)
+        this.isAuthed = true;
+        this.currentEmail = user.email
+        this.uid = user.uid;
+        this.load();
+    }, (user) => {
+        console.log('unauth')
+        console.log(user)
+        this.isAuthed = false;
+    })
+    // this.uid = Storage.getUid();
+    // if (!this.uid) {
+    //     this.initUid();
+    // } else {
+    //     this.load();
+    // }
+}
+```
+
+## next
+
+設定 firebase realtime database 讀寫權限
