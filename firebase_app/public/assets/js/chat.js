@@ -36,7 +36,7 @@ const options = {
             location.href = 'member.html';
         },
         async doSend() {
-            if (!this.message) {
+            if (!this.to || !this.message) {
                 return;
             }
 
@@ -57,12 +57,19 @@ const options = {
             }
 
             return `${hh}:${mm}`
+        },
+        doCopyUID() {
+            navigator.clipboard.writeText(this.user.uid);
+            Swal.fire({
+                title: '複製 UID',
+                html: `UID 已複製到剪貼簿`,
+                icon: 'success'
+            })
         }
     },
     mounted() {
         auth.onChange((user) => {
             this.user = user
-            this.to = this.users[this.user.email];
             database.listen(`chat/${this.user.uid}`, (data) => {
                 this.messages = data;
             });
