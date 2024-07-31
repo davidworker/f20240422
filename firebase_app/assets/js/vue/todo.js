@@ -64,7 +64,7 @@ const options = {
             this.load();
         },
         load() {
-            database.listen(this.uid, (data, snapshot) => {
+            database.listen(`todo/${this.uid}`, (data, snapshot) => {
                 console.log('from listen callback.');
                 if (!data) {
                     data = [];
@@ -76,7 +76,7 @@ const options = {
             // this.database = Storage.getData(this.uid);
         },
         save() {
-            database.write(this.uid, this.database)
+            database.write(`todo/${this.uid}`, this.database)
             // Storage.setData(this.uid, this.database);
             // if (this.autoUpload) {
             //     this.upload(true);
