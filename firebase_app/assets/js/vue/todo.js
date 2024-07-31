@@ -37,7 +37,6 @@ const options = {
     },
     methods: {
         add() {
-            console.log('add');
             let id = Math.floor(Math.random() * 10000)
             this.database.push({
                 id: id,
@@ -65,36 +64,25 @@ const options = {
         },
         load() {
             database.listen(`todo/${this.uid}`, (data, snapshot) => {
-                console.log('from listen callback.');
                 if (!data) {
                     data = [];
                 }
                 this.database = data;
             })
-            console.log(this.uid);
-
-            // this.database = Storage.getData(this.uid);
         },
         save() {
             database.write(`todo/${this.uid}`, this.database)
-            // Storage.setData(this.uid, this.database);
-            // if (this.autoUpload) {
-            //     this.upload(true);
-            // }
         },
         setChecked(item) {
             // Call by reference.
-            console.log('reference!!!')
             item.checked = !item.checked;
             this.save();
         },
         setCheckedIndex(index) {
-            console.log('index!!!!');
             this.database[index].checked = !this.database[index].checked;
             this.save();
         },
         async doRegister() {
-            console.log('register');
             if (!this.authAccount || !this.authPwd) {
                 Swal.fire({
                     title: '註冊錯誤',
@@ -130,7 +118,6 @@ const options = {
             }
         },
         async doAuth() {
-            console.log('auth');
             if (!this.authAccount || !this.authPwd) {
                 Swal.fire({
                     title: '登入錯誤',
@@ -171,25 +158,14 @@ const options = {
         }
     },
     mounted() {
-        console.log('is mounted.');
         auth.onChange((user) => {
-            console.log('authed')
-            console.log(user)
             this.isAuthed = true;
             this.currentEmail = user.email
             this.uid = user.uid;
             this.load();
         }, (user) => {
-            console.log('unauth')
-            console.log(user)
             this.isAuthed = false;
         })
-        // this.uid = Storage.getUid();
-        // if (!this.uid) {
-        //     this.initUid();
-        // } else {
-        //     this.load();
-        // }
     }
 };
 
