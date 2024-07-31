@@ -79,12 +79,49 @@ const options = {
             }
         },
         async doLogin() {
-            console.log('login')
+            if (!this.login.email || !this.login.pwd) {
+                Swal.fire({
+                    title: '登入錯誤',
+                    html: '未填寫帳號密碼',
+                    icon: 'error'
+                })
+                return
+            }
+
+            if (!validateEmail(this.login.email)) {
+                Swal.fire({
+                    title: '帳號錯誤',
+                    html: '不合法的Email格式',
+                    icon: 'error'
+                })
+                return
+            }
+
+            let response = await auth.signIn(this.login.email, this.login.pwd);
+            if (response) {
+                await Swal.fire({
+                    title: '登入成功',
+                    html: '',
+                    icon: 'success'
+                })
+                location.href = 'chat.html'
+            } else {
+                Swal.fire({
+                    title: '登入錯誤',
+                    html: '登入失敗或尚未註冊',
+                    icon: 'error'
+                })
+            }
         },
         async doLogout() {
             await auth.signOut();
             location.reload();
         }
+    },
+    mounted() {
+        auth.onChange((user) => {
+            location.href = 'chat.html'
+        })
     }
 }
 
