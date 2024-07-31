@@ -15,28 +15,50 @@ let config = {
 let app = await App.init(config);
 let auth = new Auth(app);
 
-new SignIn(auth);
-new Register(auth);
+const options = {
+    data() {
+        return {
+            mode: 'login'
+        }
+    },
+    methods: {
+        toLogin() {
+            this.mode = 'login'
+        },
+        toRegister() {
+            this.mode = 'register'
+        }
+    }
+}
 
-let registerWrap = document.querySelector('#register-wrap');
-let loginWrap = document.querySelector('#login-wrap');
-let toLoginBtn = document.querySelector('#to-login-btn');
-let toRegisterBtn = document.querySelector('#to-register-btn');
+Vue.createApp(options).mount('#member-app');
 
 
-toLoginBtn.addEventListener('click', () => {
-    loginWrap.classList.add('on');
-    registerWrap.classList.remove('on');
-})
 
-toRegisterBtn.addEventListener('click', () => {
-    loginWrap.classList.remove('on');
-    registerWrap.classList.add('on');
-})
 
-auth.onChange((user) => {
-    // TODO: 註冊或登入成功時，需先顯示訊息再轉跳
-    location.href = 'chat.html';
-}, () => {
-    loginWrap.classList.add('on');
-})
+
+// new SignIn(auth);
+// new Register(auth);
+
+// let registerWrap = document.querySelector('#register-wrap');
+// let loginWrap = document.querySelector('#login-wrap');
+// let toLoginBtn = document.querySelector('#to-login-btn');
+// let toRegisterBtn = document.querySelector('#to-register-btn');
+
+
+// toLoginBtn.addEventListener('click', () => {
+//     loginWrap.classList.add('on');
+//     registerWrap.classList.remove('on');
+// })
+
+// toRegisterBtn.addEventListener('click', () => {
+//     loginWrap.classList.remove('on');
+//     registerWrap.classList.add('on');
+// })
+
+// auth.onChange((user) => {
+//     // TODO: 註冊或登入成功時，需先顯示訊息再轉跳
+//     location.href = 'chat.html';
+// }, () => {
+//     loginWrap.classList.add('on');
+// })
